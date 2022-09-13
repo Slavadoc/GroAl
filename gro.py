@@ -6,21 +6,15 @@ b = np.zeros((4,3))
 c = a.dot(b)
 print(c)
 print(c.shape)
-
 e = np.zeros((2,1))
 print('(2,1) =',e)
 f = np.zeros((1,3))
-
 g = e.dot(f)
 print('(2,1) dot (1,3)', g.shape)
-
 h = np.zeros((5,4))
 i = np.zeros((5,6))
-
 j = h.dot(i)
 print(j.shape)
-
-
 h = np.zeros((5,4))
 i = np.zeros((5,6))
 j = h.dot(i)
