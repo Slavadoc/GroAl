@@ -1,24 +1,51 @@
-# Short about numPy
-import numpy as np
+# Метод холодно горячо
+def neural_network(input, weight):
+    prediction = input * weight
+    return prediction
 
-a = np.zeros((2,4))
-b = np.zeros((4,3))
-c = a.dot(b)
-print(c)
-print(c.shape)
-e = np.zeros((2,1))
-print('(2,1) =',e)
-f = np.zeros((1,3))
-g = e.dot(f)
-print('(2,1) dot (1,3)', g.shape)
-h = np.zeros((5,4))
-i = np.zeros((5,6))
-j = h.dot(i)
-print(j.shape)
-h = np.zeros((5,4))
-i = np.zeros((5,6))
-j = h.dot(i)
-print(j.shape)
+number_of_toes = [8.5]
+win_or_lose_binary = [1]
+input = number_of_toes[0]
+true = win_or_lose_binary[0]
+weight = 0.1
+lr = 0.01
+pred = neural_network(input, weight)
+
+error = (pred - true) ** 2
+print(error)
+
+#Cреднеквадратичная ошибка градиентный спуск
+# knob_weight = 0.5
+# input = 0.5
+# goal_pred = 0.8
+#
+# pred = input * knob_weight
+#
+# error = (pred - goal_pred) ** 2
+#
+# print(error)
+
+# # Short about numPy
+# import numpy as np
+#
+# a = np.zeros((2,4))
+# b = np.zeros((4,3))
+# c = a.dot(b)
+# print(c)
+# print(c.shape)
+# e = np.zeros((2,1))
+# print('(2,1) =',e)
+# f = np.zeros((1,3))
+# g = e.dot(f)
+# print('(2,1) dot (1,3)', g.shape)
+# h = np.zeros((5,4))
+# i = np.zeros((5,6))
+# j = h.dot(i)
+# print(j.shape)
+# h = np.zeros((5,4))
+# i = np.zeros((5,6))
+# j = h.dot(i)
+# print(j.shape)
 # a = np.array([0,1,2,,]) # vector
 # b = np.array([4,5,6,7]) # vector
 # c = np.array([[0,1,2,3],
