@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 weight = 0.5
 input = 0.5
@@ -20,6 +21,14 @@ for iteration in range(1101): # Повторить обучение много �
     if(down_error > up_error):
         weight = weight + step_amount # ◄ i Если увеличение дало лучший результат, | увеличить!
 
+=======
+weight = 0.5
+input = 0.5
+goal_prediction = 0.001
+
+step_amount = 0.001
+
+>>>>>>> d38650fefe96714a74bbda1afcebd96d7f50a6d9
 # # Метод холодно горячо
 # def neural_network(input, weight):
 #     prediction = input * weight
