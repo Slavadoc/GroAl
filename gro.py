@@ -1,35 +1,38 @@
-<<<<<<< HEAD
-
+# градиентный спуск  =  gradient descent page 80 
 weight = 0.5
+goal_pred = 0.8
 input = 0.5
-goal_prediction = 0.8
-step_amount = 0.001 # Шаг изменения веса в каждой итерации ◄—
 
-for iteration in range(1101): # Повторить обучение много раз, чтобы получить наименьшую ошибкуОсобенности обучения методом «холодно/горячо» 77
-    prediction = input * weight
-    error = (prediction - goal_prediction) ** 2
-    print("Error:" + str(error) + " Prediction:" + str(prediction))
+for i in range(20):
+    pred = input * weight
+    error = (pred - goal_pred) ** 2
+    # Чистая ошибка
+    directon_and_amount = (pred - goal_pred) * input # Масштабирование, обращение знака и остановка
+    weight = weight - directon_and_amount
 
-    up_prediction = input * (weight + step_amount) # ◄------ Попробовать увеличить!
-    up_error = (goal_prediction - up_prediction) ** 2
-
-    down_prediction = input * (weight - step_amount) # ◄------ Попробовать уменьшить!
-    down_error = (goal_prediction - down_prediction) ** 2
-
-    if(down_error < up_error):
-        weight = weight - step_amount#  ◄-------- , Е(Ли уменьшение дало лучший | результат, уменьшить!
-    if(down_error > up_error):
-        weight = weight + step_amount # ◄ i Если увеличение дало лучший результат, | увеличить!
-
-=======
-weight = 0.5
-input = 0.5
-goal_prediction = 0.001
-
-step_amount = 0.001
-
->>>>>>> d38650fefe96714a74bbda1afcebd96d7f50a6d9
+    print('Error: ',  str(error), ' Prediction: ', str(pred))
 # # Метод холодно горячо
+# weight = 0.5
+# input = 0.5
+# goal_prediction = 0.8
+# step_amount = 0.001 # Шаг изменения веса в каждой итерации ◄—
+#
+# for iteration in range(1101): # Повторить обучение много раз, чтобы получить наименьшую ошибкуОсобенности обучения методом «холодно/горячо» 77
+#     prediction = input * weight
+#     error = (prediction - goal_prediction) ** 2
+#     print("Error:" + str(error) + " Prediction:" + str(prediction))
+#
+#     up_prediction = input * (weight + step_amount) # ◄------ Попробовать увеличить!
+#     up_error = (goal_prediction - up_prediction) ** 2
+#
+#     down_prediction = input * (weight - step_amount) # ◄------ Попробовать уменьшить!
+#     down_error = (goal_prediction - down_prediction) ** 2
+#
+#     if(down_error < up_error):
+#         weight = weight - step_amount#  ◄-------- , Е(Ли уменьшение дало лучший | результат, уменьшить!
+#     if(down_error > up_error):
+#         weight = weight + step_amount # ◄ i Если увеличение дало лучший результат, | увеличить!
+
 # def neural_network(input, weight):
 #     prediction = input * weight
 #     return prediction
