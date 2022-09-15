@@ -1,18 +1,29 @@
-# Метод холодно горячо
-def neural_network(input, weight):
-    prediction = input * weight
-    return prediction
+weight = 0.5
+input = 0.5
+goal_prediction = 0.001
 
-number_of_toes = [8.5]
-win_or_lose_binary = [1]
-input = number_of_toes[0]
-true = win_or_lose_binary[0]
-weight = 0.1
-lr = 0.01
-pred = neural_network(input, weight)
+step_amount = 0.001
 
-error = (pred - true) ** 2
-print(error)
+# # Метод холодно горячо
+# def neural_network(input, weight):
+#     prediction = input * weight
+#     return prediction
+#
+# number_of_toes = [8.5]
+# win_or_lose_binary = [1]
+# input = number_of_toes[0]
+# true = win_or_lose_binary[0]
+# weight = 0.1
+# lr = 0.01
+# pred = neural_network(input, weight)
+# p_up = neural_network(input, weight)+lr
+# p_dn = neural_network(input, weight)-lr
+# e_up = (p_up - true) ** 2
+# error = (pred - true) ** 2
+# e_dn =  (p_dn - true) ** 2
+# print('error =', error)
+# print('e_up =', e_up)
+# print('e_dn = ', e_dn)
 
 #Cреднеквадратичная ошибка градиентный спуск
 # knob_weight = 0.5
